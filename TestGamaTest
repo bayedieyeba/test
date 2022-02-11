@@ -1,0 +1,58 @@
+package gama;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestGamaTest {
+	TestGama test = new TestGama();
+	@Test
+	void testMultipleTrois() {
+		
+		int n1 = 3;
+		int n2 = 7;
+		int n  = n1 * n2;
+		
+		if(test.multipleTrois(n) != true) {
+			fail("n'est pas un multiple de 3");
+		}
+	}
+
+	@Test
+	void testMultipleCinq() {
+		int n1 = 5;
+		int n2 = 7;
+		int n  = n1 * n2;
+		if(test.multipleCinq(n) != true) {
+			fail("n'est pas un multiple de 5");
+		}
+	}
+
+	@Test
+	void testMultipleCinqEtTrois() {
+		int n1 = 5;
+		int n2 = 3;
+		int n  = n1 * n2;
+		if(test.multipleCinq(n) != true && test.multipleTrois(n) != true) {
+			fail("n'est pas un multiple de 5 ni de 3");
+		}
+	}
+
+	@Test
+	void testContientTrois() {
+		int n = 939;
+		if(test.contientTrois(n) != true) {
+			fail("ce nombre ne contient pas un chiffre 3");
+		}
+		
+	}
+
+	@Test
+	void testContientCinq() {
+		int n = 955;
+		if(test.contientCinq(n) != true) {
+			fail("ce nombre ne contient pas un chiffre 5");
+		}
+	}
+
+}
