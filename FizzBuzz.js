@@ -1,5 +1,5 @@
 
-const FizzBuzz = () => {
+const FizzBuzz = ({testgama}) => {
    
    let nombre = []
    for (let i = 0; i <100; i++) 
@@ -67,7 +67,7 @@ const FizzBuzz = () => {
         return ok
        
     }
-
+testgama= "gama"
  return (
             <div>
                 
